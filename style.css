@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #500202, #ac1919);
+    color: #fff;
+    text-align: center;
+  }
+  .top-header {
+    background: linear-gradient(90deg, #8e2de2, #ff6a00);
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #fff2;
+  }
+  
+  .top-header h1 {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 6px #000;
+  }
+  
+  .top-header p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-style: italic;
+    color: #ffecec;
+  }
+  
+  
+  h1 {
+    margin-top: 30px;
+  }
+  
+  .jogo-container {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+    background: linear-gradient(90deg, #8e2de2, #ff6a00);
+    border-radius: 15px;
+    box-shadow: 0 0 15px #0006;
+  }
+  
+  .tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    padding: 10px;
+  }
+  
+  .carta-container {
+    perspective: 1000px;
+  }
+  
+  .carta {
+    width: 70px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+  
+  .carta.virada {
+    transform: rotateY(180deg);
+  }
+  
+  .frente, .verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    backface-visibility: hidden;
+  }
+  
+  .verso {
+    background-image: url("img/back.png");
+  }
+  
+  .frente {
+    transform: rotateY(180deg);
+  }
+  
+  /* Botão */
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #e91e63;
+  }
+  
+  /* MODAL */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px black;
+    max-height: 90%;
+    max-width: 90%;
+  }
+  
+  .modal-content img {
+    width: 250px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .modal-content h2 {
+    font-size: 24px;
+    color: #000000;
+  }
+  
+  .fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #444;
+  }
+  

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo de Cartas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-header">
+        <h1>🔥 Jogo das Posições 🔥</h1>
+        <p>Revele uma carta e descubra sua próxima aventura.</p>
+      </header>
+      
+
+  <section class="jogo-container">
+    <div class="tabuleiro" id="tabuleiro"></div>
+    <button id="embaralharBtn">🔄 Embaralhar</button>
+  </section>
+
+  <!-- MODAL da carta -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="fechar" class="fechar">&times;</span>
+      <h2 id="titulo-carta">Carta Revelada</h2>
+      <img id="img-carta-grande" src="" alt="Carta Revelada">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
